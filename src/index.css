@@ -8,51 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 222 47% 4%;
+    --foreground: 213 31% 91%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 222 47% 4%;
+    --card-foreground: 213 31% 91%;
 
-    --popover: 240 5% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
 
-    --primary: 142 76% 36%;
-    --primary-foreground: 240 10% 3.9%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 240 5% 6%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 213 31% 91%;
 
-    --muted: 240 5% 6%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 240 5% 6%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 216 87% 52%;
+    --accent-foreground: 222 47% 4%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 213 31% 91%;
 
-    --border: 240 5% 6%;
-    --input: 240 5% 6%;
-    --ring: 142 76% 36%;
+    --border: 223 47% 11%;
+    --input: 223 47% 11%;
+    --ring: 217 91% 60%;
 
     /* Crypto specific colors */
     --success: 142 76% 36%;
-    --success-foreground: 240 10% 3.9%;
+    --success-foreground: 222 47% 4%;
     --danger: 0 84% 60%;
-    --danger-foreground: 0 0% 98%;
+    --danger-foreground: 213 31% 91%;
     --warning: 38 92% 50%;
-    --warning-foreground: 240 10% 3.9%;
+    --warning-foreground: 222 47% 4%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
-    --gradient-card: linear-gradient(135deg, hsl(240 5% 6%), hsl(240 5% 8%));
+    /* Blue gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(216 87% 52%));
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 4%), hsl(223 47% 11%));
     --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 86% 46%));
     --gradient-danger: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 94% 70%));
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%), hsl(230 89% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(261 73% 66%));
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(142 76% 36% / 0.15);
-    --shadow-card: 0 4px 12px hsl(240 10% 3.9% / 0.15);
+    /* Beautiful shadows */
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.25);
+    --shadow-card: 0 8px 32px hsl(222 47% 4% / 0.3);
+    --shadow-blue: 0 20px 40px hsl(217 91% 60% / 0.15);
 
     --radius: 0.5rem;
 

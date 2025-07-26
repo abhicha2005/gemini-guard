@@ -90,14 +90,14 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-          <div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 animate-fade-in">
+          <div className="animate-slide-in-right">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-glow">
               Crypto Portfolio
             </h1>
-            <p className="text-muted-foreground mt-2">Track your cryptocurrency investments</p>
+            <p className="text-muted-foreground mt-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>Track your cryptocurrency investments</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 animate-scale-in" style={{ animationDelay: '0.3s' }}>
             <Button
               variant="outline"
               size="sm"
@@ -117,23 +117,30 @@ const Index = () => {
 
         {/* Holdings Grid */}
         {holdings.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {holdings.map((holding) => (
-              <HoldingCard
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            {holdings.map((holding, index) => (
+              <div 
                 key={holding.id}
-                holding={holding}
-                onRemove={handleRemoveHolding}
-              />
+                className="animate-scale-in"
+                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+              >
+                <HoldingCard
+                  holding={holding}
+                  onRemove={handleRemoveHolding}
+                />
+              </div>
             ))}
           </div>
         ) : (
-          <div className="text-center py-16">
-            <div className="max-w-md mx-auto">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Start Building Your Portfolio</h3>
-              <p className="text-muted-foreground mb-8">
+          <div className="text-center py-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="max-w-md mx-auto animate-float">
+              <h3 className="text-2xl font-semibold text-foreground mb-4 animate-scale-in">Start Building Your Portfolio</h3>
+              <p className="text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 Add your first cryptocurrency holding to start tracking your portfolio performance.
               </p>
-              <AddHoldingDialog onAddHolding={handleAddHolding} />
+              <div className="animate-scale-in" style={{ animationDelay: '0.4s' }}>
+                <AddHoldingDialog onAddHolding={handleAddHolding} />
+              </div>
             </div>
           </div>
         )}
