@@ -99,6 +99,14 @@ const Index = () => {
           </div>
           <div className="flex gap-3 animate-scale-in" style={{ animationDelay: '0.3s' }}>
             <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => window.location.href = '/presentation'}
+              className="border-border hover:bg-muted/50"
+            >
+              📊 View Presentation
+            </Button>
+            <Button
               variant="outline"
               size="sm"
               onClick={handleRefresh}
