@@ -116,12 +116,9 @@ const Index = () => {
         {/* Portfolio Summary */}
         {holdings.length > 0 && <PortfolioSummary portfolio={portfolio} />}
 
-        {/* Top Movers Section */}
-        <TopMoversSection />
-
         {/* Holdings Grid */}
         {holdings.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 animate-fade-in" style={{ animationDelay: '0.5s' }}>
             {holdings.map((holding, index) => (
               <div 
                 key={holding.id}
@@ -136,7 +133,7 @@ const Index = () => {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="text-center py-16 mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="max-w-md mx-auto animate-float">
               <h3 className="text-2xl font-semibold text-foreground mb-4 animate-scale-in">Start Building Your Portfolio</h3>
               <p className="text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -148,6 +145,9 @@ const Index = () => {
             </div>
           </div>
         )}
+
+        {/* Top Movers Section */}
+        <TopMoversSection />
       </div>
     </div>
   );
