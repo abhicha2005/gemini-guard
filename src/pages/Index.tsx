@@ -4,6 +4,7 @@ import { RefreshCw } from 'lucide-react';
 import { PortfolioSummary } from '@/components/PortfolioSummary';
 import { HoldingCard } from '@/components/HoldingCard';
 import { AddHoldingDialog } from '@/components/AddHoldingDialog';
+import { TopMoversSection } from '@/components/TopMoversSection';
 import { CryptoHolding, Portfolio } from '@/types/crypto';
 import { useCryptoPrices } from '@/hooks/useCryptoPrices';
 import { useToast } from '@/hooks/use-toast';
@@ -114,6 +115,9 @@ const Index = () => {
 
         {/* Portfolio Summary */}
         {holdings.length > 0 && <PortfolioSummary portfolio={portfolio} />}
+
+        {/* Top Movers Section */}
+        <TopMoversSection />
 
         {/* Holdings Grid */}
         {holdings.length > 0 ? (
